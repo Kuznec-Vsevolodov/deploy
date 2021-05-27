@@ -31,6 +31,7 @@ export default {
           this.title = response.data.title
           this.address = response.data.address
           this.image = response.data.general_scheme
+          console.log(response.data.general_scheme)
     });
   },
   methods: {

@@ -21,11 +21,6 @@
             Places
           </router-link>
         </b-nav-item>
-        <b-nav-item>
-          <router-link :to="{path: `events/`}">
-            Booking
-          </router-link>
-        </b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -37,7 +32,8 @@
             <em v-if="name == ''">User</em>
             <em v-else>{{name}}</em>
           </template>
-          <b-dropdown-item v-if="name == ''"><router-link :to="{path: `/login`}" class="log_link">Sign in</router-link></b-dropdown-item>
+          <b-dropdown-item v-if="name == ''"><router-link :to="{path: `/register`}" class="log_link">Sign in</router-link></b-dropdown-item>
+          <b-dropdown-item v-if="name == ''"><router-link :to="{path: `/login`}" class="log_link">Log in</router-link></b-dropdown-item>
           <div v-else>
             <b-dropdown-item><router-link :to="{path: `/profile/`+id}" class="log_link">Profile</router-link></b-dropdown-item>
             <b-dropdown-item @click="LogOut">Log out</b-dropdown-item>

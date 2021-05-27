@@ -9,8 +9,9 @@
           <p>Адрес: <span>{{place.address}}</span></p>
         </div>
       </div>
-      <div v-if="user == place.owner">
+      <div v-if="user == place.owner" style="display: flex; flex-direction: column">
         <router-link :to="{path: `/places/red-places/`+place.id}">Редактировать информацию</router-link>
+        <button class="btn btn-danger">Удалить запись</button>
       </div>
       <b-container>
         <p class="sec-group-gen-info">Располагающиеся здесь сектора:</p>
@@ -41,6 +42,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data(){
     return{
@@ -55,6 +58,18 @@ export default {
     var response_sector = await fetch('http://127.0.0.1:8000/demo/places/sectors/'+this.$route.params.id)
     this.place = await response_place.json()
     this.sectors = await response_sector.json()
+  },
+  methods:{
+    delete(){
+      axios.delete('http://127.0.0.1:8000/demo/red-places/'+this.$route.params.id, {
+          "username": this.username,
+          "password": this.password
+        })
+          .then((response) => {
+            console.log(response)
+            setTimeout(() => {  location.href = '/'; }, 1000);
+      })
+    }
   }
 }
 </script>
@@ -85,4 +100,5 @@ export default {
   .sec-group-gen-info{
     font-weight: bold;
   }
+
 </style>

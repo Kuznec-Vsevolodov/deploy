@@ -1,13 +1,14 @@
 <template>
   <div>
-    <div>Вы уже авторизированы</div>
-     <h1>Sign in</h1>
-     <label>Name</label>
-     <input required v-model="username" type="text" placeholder="Name"/>
-     <label>Password</label>
-     <input required v-model="password" type="password" placeholder="Password"/>
-     <hr/>
-     <button v-on:click="Login">Login</button>
+     <h1>Log in</h1>
+    <b-container>
+      <label>Name</label>
+       <input required v-model="username" type="text" placeholder="Name"/>
+       <label>Password</label>
+       <input required v-model="password" type="password" placeholder="Password"/>
+       <hr/>
+       <button v-on:click="Login">Login</button>
+    </b-container>
   </div>
 
 </template>
@@ -34,7 +35,7 @@ export default {
           localStorage.refreshToken = response.data.refresh;
           localStorage.name = this.username;
           console.log(localStorage.accessToken)
-          setTimeout(() => {  location.href = 'http://localhost:8080/'; }, 1000);
+          setTimeout(() => {  location.href = '/'; }, 1000);
 
         })
         .catch((error) => {

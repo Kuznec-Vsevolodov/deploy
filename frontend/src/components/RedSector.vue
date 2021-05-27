@@ -25,7 +25,8 @@ export default {
       rows: 0,
       columns: 0,
       price: 0,
-      description: ''
+      description: '',
+      place: 0
     }
   },
   created() {
@@ -39,6 +40,8 @@ export default {
           this.columns = response.data.columns
           this.price = response.data.price
           this.description = response.data.description
+          this.place = response.data.place
+
     });
   },
   methods: {
@@ -47,7 +50,7 @@ export default {
       },
       sendData(){
         axios.put('http://127.0.0.1:8000/demo/sectors/'+this.$route.params.id+'/',
-            { 'title': this.title, 'size': this.size, 'rows': this.rows, 'columns': this.columns, 'price': this.price, 'description': this.description},
+            { 'title': this.title, 'size': parseInt(this.size), 'rows': parseInt(this.rows), 'columns': parseInt(this.columns), 'price': parseInt(this.price), 'description': this.description, 'place': this.place},
             { headers: { Authorization: `Bearer ${localStorage.accessToken}` }})
         .then((response) => {
           this.sector_data = response.data

@@ -75,6 +75,9 @@ export default {
                       console.log("Поздравляем с бронью")
                       console.log(response.data)
           })
+          .catch((error) => {
+            console.log(error)
+           })
         }
         }
     }

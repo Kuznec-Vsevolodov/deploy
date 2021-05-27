@@ -31,7 +31,7 @@ class PlaceRedoDetailView(APIView):
     def put(self, request, pk, *args, **kwargs):
         current_data = Place.objects.get(id=pk)
         current_data.__dict__
-        update_serializer = PlaceSerializer(current_data, data={'title': request.data['title'], 'address': request.data['address'], 'general_scheme': request.data['general_scheme'] })
+        update_serializer = PlaceSerializer(current_data, data={'title': request.data['title'], 'address': request.data['address'], 'general_scheme': request.data['general_scheme'], 'owner': request.user.id})
         if update_serializer.is_valid():
             update_serializer.save()
         return Response(update_serializer.data)
@@ -197,7 +197,7 @@ class RegisterView(APIView):
         serializer = WalletSerializer(data={'user': user.id, 'wallet': 0})
         serializer.is_valid()
         serializer.save()
-        return Response("User " + user.username + " is registered")
+        return Response(serializer.data)
 
 class TokenView(APIView):
     def get(self, request):

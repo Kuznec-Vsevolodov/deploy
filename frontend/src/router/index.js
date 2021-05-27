@@ -9,6 +9,8 @@ import LogIn from "@/components/LogIn";
 import User from "@/components/User";
 import RedPlace from "@/components/RedPlace";
 import RedSector from "@/components/RedSector";
+import  Register from "@/components/Register";
+import AddPlace from "@/components/AddPlace";
 
 export default new VueRouter({
   mode: 'history',
@@ -53,6 +55,14 @@ export default new VueRouter({
       {
           path: '/places/red-places/:id',
           component: RedPlace,
+      },
+      {
+          path: '/register',
+          component: Register,
+      },
+      {
+          path: '/add-place',
+          component: AddPlace
       }
   ]
 })
