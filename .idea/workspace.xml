@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc03a2dc-adb6-4c35-af2e-931132636465" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/nginx/nginx-proxy.conf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nginx/nginx-proxy.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
       <workItem from="1621500014519" duration="7135000" />
       <workItem from="1621919795234" duration="14162000" />
       <workItem from="1622010951636" duration="7949000" />
-      <workItem from="1622095567556" duration="16058000" />
+      <workItem from="1622095567556" duration="16265000" />
     </task>
     <servers />
   </component>
