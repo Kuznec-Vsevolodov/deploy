@@ -25,7 +25,7 @@ export default {
   },
   methods: {
       Login: function () {
-        axios.post('http://127.0.0.1:8000/demo/token/', {
+        axios.post('http://192.168.220.14:8000/demo/token/', {
           "username": this.username,
           "password": this.password
         })

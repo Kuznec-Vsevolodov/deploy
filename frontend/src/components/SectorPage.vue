@@ -51,10 +51,10 @@ export default {
   },
   async created() {
     console.log(this.$route.params.id)
-    var response_events = await fetch('http://127.0.0.1:8000/demo/events/')
+    var response_events = await fetch('http://192.168.220.14:8000/demo/events/')
     this.events = await response_events.json()
-    var response_place = await fetch('http://127.0.0.1:8000/demo/sectors/parking_places/'+this.$route.params.id);
-    var response_sector = await fetch('http://127.0.0.1:8000/demo/sectors/'+this.$route.params.id)
+    var response_place = await fetch('http://192.168.220.14:8000/demo/sectors/parking_places/'+this.$route.params.id);
+    var response_sector = await fetch('http://192.168.220.14:8000/demo/sectors/'+this.$route.params.id)
     this.places = await response_place.json()
     this.sector = await response_sector.json()
     this.columns = this.sector.columns;
@@ -68,7 +68,7 @@ export default {
           console.log("Некорректно заданы значения")
         }else{
          for(var i = 0; i < this.selectedPlaces.length; i++){
-          axios.post('http://127.0.0.1:8000/demo/booked_places/',
+          axios.post('http://192.168.220.14:8000/demo/booked_places/',
           { "parking_place": this.selectedPlaces[i][1], "event_id": this.selectedEvent},
           { headers: { Authorization: `Bearer ${localStorage.accessToken}` }})
           .then((response) => {

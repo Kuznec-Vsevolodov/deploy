@@ -24,7 +24,7 @@ export default {
     }
   },
   created() {
-    axios.get('http://127.0.0.1:8000/demo/red-places/'+this.$route.params.id,
+    axios.get('http://192.168.220.14:8000/demo/red-places/'+this.$route.params.id,
         { headers: { Authorization: `Bearer ${localStorage.accessToken}` }})
         .then((response) => {
           this.place_data = response.data
@@ -39,7 +39,7 @@ export default {
         this.file = this.$refs.image.files[0];
       },
       sendData(){
-        axios.put('http://127.0.0.1:8000/demo/red-places/'+this.$route.params.id+'/',
+        axios.put('http://192.168.220.14:8000/demo/red-places/'+this.$route.params.id+'/',
             { 'title': this.title, 'address': this.address, 'general_scheme': this.image},
             { headers: { Authorization: `Bearer ${localStorage.accessToken}` }})
         .then((response) => {

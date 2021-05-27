@@ -35,7 +35,7 @@ export default {
     }
   },
   async created() {
-    var response = await axios.get('http://127.0.0.1:8000/demo/places/').then((response) => {
+    var response = await axios.get('http://192.168.220.14:8000/demo/places/').then((response) => {
                   console.log(response.data)
                   return response.data
         })

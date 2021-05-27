@@ -34,7 +34,7 @@ export default {
         fd.append('address',this.address)
         fd.append('owner', localStorage.userId)
 
-      axios.post('http://127.0.0.1:8000/demo/red-places/', fd,
+      axios.post('http://192.168.220.14:8000/demo/red-places/', fd,
           {headers: {Authorization: `Bearer ${localStorage.accessToken}`}})
           .then((response) => {
             this.place_data = response.data

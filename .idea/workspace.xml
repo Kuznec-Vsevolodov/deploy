@@ -2,19 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc03a2dc-adb6-4c35-af2e-931132636465" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Register.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/parking/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/parking/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AddPlace.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AddPlace.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BookComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Events.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Events.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/HelloWorld.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/LogIn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/LogIn.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/PlacePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PlacePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Places.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Places.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/RedPlace.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RedPlace.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/RedSector.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RedSector.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Register.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/SectorPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SectorPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Sectors.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Sectors.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/User.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/User.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
       <workItem from="1621500014519" duration="7135000" />
       <workItem from="1621919795234" duration="14162000" />
       <workItem from="1622010951636" duration="7949000" />
-      <workItem from="1622095567556" duration="14187000" />
+      <workItem from="1622095567556" duration="14975000" />
     </task>
     <servers />
   </component>

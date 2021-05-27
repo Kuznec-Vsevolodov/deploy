@@ -12,7 +12,7 @@
         style="width: 300px;"
         class="mb-2 ml-2 mr-2"
       >
-        <img :src="'http://127.0.0.1:8000'+event.event_cover" alt="" width="100%">
+        <img :src="'http://192.168.220.14:8000'+event.event_cover" alt="" width="100%">
         <b-card-text>
           Описание: <span>{{event.description}}</span>
           <br>
@@ -34,7 +34,7 @@ export default {
     }
   },
   async created() {
-    var response = await fetch('http://127.0.0.1:8000/demo/events/')
+    var response = await fetch('http://192.168.220.14:8000/demo/events/')
     this.events = await response.json()
   }
 }

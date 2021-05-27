@@ -30,7 +30,7 @@ export default {
     }
   },
   created() {
-    axios.get('http://127.0.0.1:8000/demo/sectors/'+this.$route.params.id,
+    axios.get('http://192.168.220.14:8000/demo/sectors/'+this.$route.params.id,
         { headers: { Authorization: `Bearer ${localStorage.accessToken}` }})
         .then((response) => {
           this.sector_data = response.data
@@ -49,7 +49,7 @@ export default {
         this.file = this.$refs.image.files[0];
       },
       sendData(){
-        axios.put('http://127.0.0.1:8000/demo/sectors/'+this.$route.params.id+'/',
+        axios.put('http://192.168.220.14:8000/demo/sectors/'+this.$route.params.id+'/',
             { 'title': this.title, 'size': parseInt(this.size), 'rows': parseInt(this.rows), 'columns': parseInt(this.columns), 'price': parseInt(this.price), 'description': this.description, 'place': this.place},
             { headers: { Authorization: `Bearer ${localStorage.accessToken}` }})
         .then((response) => {

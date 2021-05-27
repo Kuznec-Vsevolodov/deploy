@@ -44,7 +44,7 @@ export default {
   created(){
     try {
         var walletId = this.$route.params.id-1
-        axios.get('http://127.0.0.1:8000/demo/wallets/'+walletId,
+        axios.get('http://192.168.220.14:8000/demo/wallets/'+walletId,
             { headers: { Authorization: `Bearer ${localStorage.accessToken}` }})
             .then((response) => {
                   this.wallet = response.data.wallet
@@ -53,7 +53,7 @@ export default {
     } catch (error) {
       console.error('Ошибка подключения');
     }
-    axios.get('http://127.0.0.1:8000/demo/get-users-places/'+this.$route.params.id,
+    axios.get('http://192.168.220.14:8000/demo/get-users-places/'+this.$route.params.id,
             { headers: { Authorization: `Bearer ${localStorage.accessToken}` }})
             .then((response) => {
                   console.log(response.data)
@@ -73,7 +73,7 @@ export default {
       if(price < 0){
         price = -price
       }
-      axios.put('http://127.0.0.1:8000/demo/wallets/'+walletId+'/', {
+      axios.put('http://192.168.220.14:8000/demo/wallets/'+walletId+'/', {
               "income": price
             },
             { headers: { Authorization: `Bearer ${localStorage.accessToken}` }})

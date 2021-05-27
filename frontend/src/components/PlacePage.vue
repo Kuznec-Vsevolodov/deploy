@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
       <div class="place col-md-3">
-        <img :src="'http://127.0.0.1:8000'+place.general_scheme" alt="" style="width: 400px;">
+        <img :src="'http://192.168.220.14:8000'+place.general_scheme" alt="" style="width: 400px;">
         <div class="sector-top">
           <p>{{place.title}}</p>
         </div>
@@ -54,14 +54,14 @@ export default {
   },
   async created() {
     this.user = localStorage.userId;
-    var response_place = await fetch('http://127.0.0.1:8000/demo/places/'+this.$route.params.id);
-    var response_sector = await fetch('http://127.0.0.1:8000/demo/places/sectors/'+this.$route.params.id)
+    var response_place = await fetch('http://192.168.220.14:8000/demo/places/'+this.$route.params.id);
+    var response_sector = await fetch('http://192.168.220.14:8000/demo/places/sectors/'+this.$route.params.id)
     this.place = await response_place.json()
     this.sectors = await response_sector.json()
   },
   methods:{
     delete(){
-      axios.delete('http://127.0.0.1:8000/demo/red-places/'+this.$route.params.id, {
+      axios.delete('http://192.168.220.14:8000/demo/red-places/'+this.$route.params.id, {
           "username": this.username,
           "password": this.password
         })

@@ -33,7 +33,7 @@ export default {
        this.warning = 'Вы не можете зарегистрироваться. Данные неверны'
        this.isVisible = true
      }else{
-       axios.post('http://127.0.0.1:8000/demo/register/', {
+       axios.post('http://192.168.220.14:8000/demo/register/', {
           "username": this.name,
           "password": this.password,
           "email": this.email,
@@ -42,7 +42,7 @@ export default {
         .then((response) => {
           console.log(response)
           localStorage.userId = response.data.id;
-          axios.post('http://127.0.0.1:8000/demo/token/', {
+          axios.post('http://192.168.220.14:8000/demo/token/', {
           "username": this.name,
           "password": this.password
         })

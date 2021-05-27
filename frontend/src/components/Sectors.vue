@@ -17,7 +17,7 @@
           Цена за место в данном секторе: <span>{{sector.price}}</span>
         </b-card-text>
 
-        <b-button :href="'http://127.0.0.1:8000/demo/sectors/'+sector.id" variant="primary">Go somewhere</b-button>
+        <b-button :href="'http://192.168.220.14:8000/demo/sectors/'+sector.id" variant="primary">Go somewhere</b-button>
       </b-card>
     </div>
     </b-row>
@@ -33,7 +33,7 @@ export default {
     }
   },
   async created() {
-    var response = await fetch('http://127.0.0.1:8000/demo/sectors/')
+    var response = await fetch('http://192.168.220.14:8000/demo/sectors/')
     this.sectors = await response.json()
   }
 }
