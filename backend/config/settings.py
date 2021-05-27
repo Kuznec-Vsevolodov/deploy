@@ -71,7 +71,7 @@ ALLOWED_HOSTS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
-    "http://localhost"
+    "http://localhost",
     "http://192.168.220.14"
 ]
 
